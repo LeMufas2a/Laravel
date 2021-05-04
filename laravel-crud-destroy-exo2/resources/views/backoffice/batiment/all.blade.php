@@ -18,10 +18,11 @@
             <td>{{$batiment ->name}}</td>
             <td>{{$batiment ->adresse}}</td>
             <td>{{$batiment ->description}}</td>
-            <td>
+            <td class="d-flex">
+                <a class="btn btn-warning shadow-none " href="/batiment/{{$batiment->id}}/edit">Edit</a>
                 <form action="/batiment/{{$batiment->id}}/delete" method="post">
                     @csrf
-                    <button class="btn btn-danger w-50 text-white " type="submit">Delete</button>
+                    <button class="btn btn-danger ms-2 text-white " type="submit">Delete</button>
                 </form>
             </td>
         </tr>

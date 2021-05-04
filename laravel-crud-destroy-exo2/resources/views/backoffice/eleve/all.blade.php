@@ -11,7 +11,7 @@
             <th scope="col">Age</th>
             <th scope="col">Birdtday</th>
             <th scope="col">Nationalité</th>
-            <th scope="col">Supression</th>
+            <th scope="col">Modifer/Supprimer</th>
         </tr>
     </thead>
     <tbody>
@@ -23,10 +23,11 @@
             <td>{{$eleve ->age}}</td>
             <td>{{$eleve ->ddn}}</td>
             <td>{{$eleve ->nationalité  }}</td>
-            <td>
+            <td class="d-flex">
+                <a class="btn btn-warning shadow-none " href="/eleve/{{$eleve->id}}/edit">Edit</a>
                 <form action="/eleve/{{$eleve->id}}/delete" method="post">
                     @csrf
-                    <button class="btn btn-danger w-50 text-white " type="submit">Delete</button>
+                    <button class="btn btn-danger ms-2  text-white " type="submit">Delete</button>
                 </form>
             </td>
         </tr>

@@ -11,7 +11,6 @@
             <th scope="col">Hors Condition</th>
             <th scope="col">Description</th>
             <th scope="col">Supression</th>
-
         </tr>
     </thead>
     <tbody>
@@ -22,10 +21,11 @@
             <td>{{$formation ->nombre}}</td>
             <td>{{$formation ->horsCondition}}</td>
             <td>{{$formation ->description}}</td>
-            <td>
+            <td class="d-flex">
+                <a class="btn btn-warning shadow-none " href="/formation/{{$formation->id}}/edit">Edit</a>
                 <form action="/formation/{{$formation->id}}/delete" method="post">
                     @csrf
-                    <button class="btn btn-danger w-50 text-white " type="submit">Delete</button>
+                    <button class="btn btn-danger ms-2  text-white " type="submit">Delete</button>
                 </form>
             </td>
         </tr>
