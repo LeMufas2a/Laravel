@@ -4,6 +4,7 @@ use App\Http\Controllers\BiblioController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LivreController;
 use App\Http\Controllers\UserController;
+use App\Models\Image;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,14 +18,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/user', [UserController::class, 'index']);
+/* User */
+
+Route::get('/users', [UserController::class, 'index'])->name('users');
+Route::post('/users/{id}/delete', [UserController::class, 'destroy']);
 
 
-Route::get('/user', [BiblioController::class, 'index']);
+/* Bibliothèque */
+Route::get('/bibliothèque', [BiblioController::class, 'index'])->name('biblios');
+Route::post('/bibliothèque/{id}/delete', [BiblioController::class, 'destroy']);
 
 
-Route::get('/user', [LivreController::class, 'index']);
+/* Livres */
+Route::get('/livres', [LivreController::class, 'index'])->name('livres');
+Route::post('/livres/{id}/delete', [LivreController::class, 'destroy']);
 
 
-Route::get('/user', [ImageController::class, 'index']);
-
+/* Images */
+Route::get('/images', [ImageController::class, 'index'])->name('images');
+Route::post('/images/{id}/delete', [ImageController::class, 'destroy']);

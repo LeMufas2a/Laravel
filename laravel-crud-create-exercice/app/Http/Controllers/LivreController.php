@@ -7,8 +7,15 @@ use Illuminate\Http\Request;
 
 class LivreController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $livres = Livre::all();
         return view('Livre', compact('livres'));
-        }
+    }
+    public function destroy($id)
+    {
+        $livres = Livre::find($id);
+        $livres->delete();
+        return redirect()->back();
+    }
 }
