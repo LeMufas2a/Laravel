@@ -17,7 +17,7 @@ class ServiceController extends Controller
     {
         $services = Service::find($id);
         $services->delete();
-        return redirect()->back()->with('message', "L'utilisateur" . $services->id . " a été supprimé ", compact('services'));
+        return redirect()->back()->with('message', "L'utilisateur"  . $services->id  . " a été supprimé ", compact('services'));
     }
     public function show($id)
     {
@@ -31,13 +31,31 @@ class ServiceController extends Controller
     }
     public function update($id, Request $request)
     {
-      
+
         $services = Service::find($id);
         $services->icone = $request->icone;
         $services->titre = $request->titre;
         $services->description = $request->description;
         $services->save();
-        return redirect()->route('services')->with("message", " Votre utilisateur  avec l'id " . $services->id . " a été modifiée");
+        return redirect()->route('services')->with("message", " Votre utilisateur  avec l'id "  . $services->id  . " a été modifiée");
     }
-    public 
+    public function create()
+    {
+        return view('backoffice.portfolio.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'icone' => "required",
+            'titre' => "required",
+            'description' => "required"
+        ]);
+        $services = new Service;
+        $services->icone = $request->icone;
+        $services->titre = $request->titre;
+        $services->description = $request->description;
+        $services->save();
+        return redirect()->route('services')->with("message",  " Votre user  a été créer avec l'id  " .  $services->id);
+    }
 }

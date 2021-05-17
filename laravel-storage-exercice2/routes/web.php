@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,16 @@ Route::post('/users/{id}/update', [UserController::class, 'update']);
 Route::get('/users/create', [UserController::class, 'create']);
 Route::post('/users/store', [UserController::class, 'store']);
 Route::post('/users/{id}/download', [UserController::class, 'download']);
+
+
+Route::get('portfolios', [PortfolioController::class, 'index'])->name('portfolios');
+Route::post('/portfolios/{id}/delete', [PortfolioController::class, 'delete']);
+Route::get('/portfolios/{id}/show', [PortfolioController::class, 'show']);
+Route::get('/portfolios/{id}/edit', [PortfolioController::class, 'edit']);
+Route::post('/portfolios/{id}/update', [PortfolioController::class, 'update']);
+Route::get('/portfolios/create', [PortfolioController::class, 'create']);
+Route::post('/portfolios/store', [PortfolioController::class, 'store']);
+Route::post('/portfolios/{id}/download', [PortfolioController::class, 'download']);
 
 
 Route::get('services', [ServiceController::class, 'index'])->name('services');

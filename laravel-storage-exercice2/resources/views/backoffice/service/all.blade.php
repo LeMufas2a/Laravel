@@ -29,7 +29,7 @@
                     <div class="d-flex">
                         <form action="/services/{{$service->id}}/download" method="post">
                             @csrf
-                            <button class="btn btn-warning " type="submit">Télécharger</button>
+                            <button class="btn btn-warning " type="submit"><del>Télécharger</del></button>
                         </form>
                         <a href="/services/{{ $service->id }}/edit"
                             class="btn btn-primary  shadow-none ms-3 ">Modifier</a>
