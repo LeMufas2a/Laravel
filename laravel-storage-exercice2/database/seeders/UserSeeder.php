@@ -18,7 +18,39 @@ class UserSeeder extends Seeder
             'nom' => 'Mufasa',
             'prenom' => 'Mohammed',
             'age' => '19',
-            'email' => 'mufasa@gmail.com',
+            'email' => 'e@gmail.com',
+            'password' => 'LeMufasaa',
+            'picture' => "trest"
+        ]);
+        DB::table('users')->insert([
+            'nom' => 'Mufasa',
+            'prenom' => 'Mohammed',
+            'age' => '19',
+            'email' => 'd@gmail.com',
+            'password' => 'LeMufasaa',
+            'picture' => "trest"
+        ]);
+        DB::table('users')->insert([
+            'nom' => 'Mufasa',
+            'prenom' => 'Mohammed',
+            'age' => '19',
+            'email' => 'c@gmail.com',
+            'password' => 'LeMufasaa',
+            'picture' => "trest"
+        ]);
+        DB::table('users')->insert([
+            'nom' => 'Mufasa',
+            'prenom' => 'Mohammed',
+            'age' => '19',
+            'email' => 'a@gmail.com',
+            'password' => 'LeMufasaa',
+            'picture' => "trest"
+        ]);
+        DB::table('users')->insert([
+            'nom' => 'Mufasa',
+            'prenom' => 'Mohammed',
+            'age' => '19',
+            'email' => 'b@gmail.com',
             'password' => 'LeMufasaa',
             'picture' => "trest"
         ]);
