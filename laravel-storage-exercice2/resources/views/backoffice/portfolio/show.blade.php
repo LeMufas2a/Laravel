@@ -2,7 +2,7 @@
 @section('content')
 <main id="main">
     <div class="w-100 text-center">
-        <h1 class="mt-5">Users</h1>
+        <h1 class="mt-5">Galeries</h1>
         <a href={{route('portfolios')}} class="btn btn-danger text-white">Retour</a>
     </div>
     <table class="table">

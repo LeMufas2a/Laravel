@@ -1,0 +1,30 @@
+@extends('layout.app')
+@section('content')
+<main id="main w-100 d-flex justify-content-center flex-column align-items-center ">
+    <div class="text-center w-100">
+        <h1 class="mt-5">Galeries</h1>
+    </div>
+    <form action="/galeries/{{$galeries->id}}/update"
+        class=" d-flex justify-content-start flex-column  align-items-center mt-5" method="POST"
+        enctype="multipart/form-data">
+        @csrf
+
+        <label>Nom : </label>
+        <input type="text" name="nom" value="{{$galeries->nom}}">
+
+
+        <label>Description : </label>
+        <input type="text" name="description" value="{{$galeries->description}}">
+
+     
+
+        <label>Image:</label>
+        <input type="file" name="image">
+        <div class="text-center d-flex flex-column mt-3" style="width: 150px">
+            <a href={{route('galeries')}} class=" mt-3 btn btn-danger ">Annuler </a>
+            <button type="submit" class=" mt-3 btn btn-warning ml-5">Modifier</button>
+        </div>
+    </form>
+
+</main>
+@endsection

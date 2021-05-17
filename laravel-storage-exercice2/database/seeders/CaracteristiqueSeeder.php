@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class GalerieSeeder extends Seeder
+class CaracteristiqueSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,10 @@ class GalerieSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('galeries')->insert([
+        DB::table('caracteristiques')->insert([
             'nom' => 'LeshMuf',
-            'image' => 'Insérez Image',
-            'description' => 'Ceci est une description'
+            'chiffre' => random_int(0, 1000),
+            'icone' => 'Ceci est une icone'
         ]);
     }
 }

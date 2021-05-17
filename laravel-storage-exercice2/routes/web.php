@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CaracteristiqueController;
+use App\Http\Controllers\GalerieController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UserController;
@@ -45,3 +47,21 @@ Route::post('/services/{id}/update', [ServiceController::class, 'update']);
 Route::get('/services/create', [ServiceController::class, 'create']);
 Route::post('/services/store', [ServiceController::class, 'store']);
 Route::post('/services/{id}/download', [ServiceController::class, 'download']);
+
+Route::get('galeries', [GalerieController::class, 'index'])->name('galeries');
+Route::post('/galeries/{id}/delete', [GalerieController::class, 'delete']);
+Route::get('/galeries/{id}/show', [GalerieController::class, 'show']);
+Route::get('/galeries/{id}/edit', [GalerieController::class, 'edit']);
+Route::post('/galeries/{id}/update', [GalerieController::class, 'update']);
+Route::get('/galeries/create', [GalerieController::class, 'create']);
+Route::post('/galeries/store', [GalerieController::class, 'store']);
+Route::post('/galeries/{id}/download', [GalerieController::class, 'download']);
+
+Route::get('caracteristiques', [CaracteristiqueController::class, 'index'])->name('caracteristiques');
+Route::post('/caracteristiques/{id}/delete', [CaracteristiqueController::class, 'delete']);
+Route::get('/caracteristiques/{id}/show', [CaracteristiqueController::class, 'show']);
+Route::get('/caracteristiques/{id}/edit', [CaracteristiqueController::class, 'edit']);
+Route::post('/caracteristiques/{id}/update', [CaracteristiqueController::class, 'update']);
+Route::get('/caracteristiques/create', [CaracteristiqueController::class, 'create']);
+Route::post('/caracteristiques/store', [CaracteristiqueController::class, 'store']);
+Route::post('/caracteristiques/{id}/download', [CaracteristiqueController::class, 'download']);
