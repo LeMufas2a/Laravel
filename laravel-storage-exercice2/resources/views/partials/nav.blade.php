@@ -5,6 +5,7 @@
                 <a class=" mx-2  nav-link btn btn-primary text-white mt-3 px-5" href={{route('users')}}>User</a>
                 <a class=" mx-2  nav-link btn btn-primary text-white mt-3 px-5" href={{route('services')}}>Services</a>
                 <a class=" mx-2  nav-link btn btn-primary text-white mt-3 px-5" href={{route('portfolios')}}>Portfolios</a>
+                <a class=" mx-2  nav-link btn btn-primary text-white mt-3 px-5" href={{route('galeries')}}>Galeries</a>
             </div>
         </div>
     </div>
